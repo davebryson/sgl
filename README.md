@@ -21,7 +21,7 @@ Rule = {
 ```
 You can then apply the rule to a set of principals to test if can be granted the permission:
 ```erlang
-%% Here are the Prinicipals
+%% Here are the Principals
 Principals = [
     {"alice", ["stagehand"]},
     {"carl", ["press"]},
