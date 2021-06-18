@@ -28,7 +28,8 @@ Principals = [
     {"jim", ["ticketholder"]}
 ],
 
-%% Ids is a list of the Prinicipal Ids that fulfilled the rule. In this example, that would be carl and jim.
+%% Ids is a list of the Prinicipal Ids that fulfilled the rule. 
+%% In this example, that would be carl and jim.
 {ok, Ids} = sgl:evaluate(Rule, Principals).
 ```
 
