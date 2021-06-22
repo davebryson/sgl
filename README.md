@@ -9,7 +9,7 @@ This version use the Erlang terms for the language definition, but it could be e
 
 ## Example
 
-Here's a simple rule that says `grant` the permission `backstage` to anyone with role `ticketholder` or `press`.
+Here's a simple rule that says `grant` the permission `backstage` to anyone with the role `ticketholder` OR `press`.
 ```erlang 
 Rule = {
     {grant, ["backstage"]},
@@ -19,7 +19,7 @@ Rule = {
     ]).
 }
 ```
-You can then apply the rule to a set of principals to test if can be granted the permission:
+You can then apply the rule to a set of principals to test if they can be granted the permission:
 ```erlang
 %% Here are the Principals
 Principals = [
@@ -28,8 +28,8 @@ Principals = [
     {"jim", ["ticketholder"]}
 ],
 
-%% Ids is a list of the Prinicipal Ids that fulfilled the rule. 
-%% In this example, that would be carl and jim.
+%% 'Ids' is a list of the Prinicipal Ids that may fulfill the rule. 
+%% In this example, that would be either carl OR jim.
 {ok, Ids} = sgl:evaluate(Rule, Principals).
 ```
 
